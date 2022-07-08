@@ -169,9 +169,9 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
   if(!is.null(df.u$labels)) {
     if(!is.null(df.u$groups)) {
       g <- g + geom_text(aes(label = labels, color = groups), 
-                         size = labels.size)
+                         size = labels.size, family = "HiraKakuProN-W3")
     } else {
-      g <- g + geom_text(aes(label = labels), size = labels.size)      
+      g <- g + geom_text(aes(label = labels), size = labels.size, family = "HiraKakuProN-W3")
     }
   } else {
     if(!is.null(df.u$groups)) {
@@ -206,7 +206,8 @@ ggbiplot <- function(pcobj, choices = 1:2, scale = 1, pc.biplot = TRUE,
     geom_text(data = df.v, 
               aes(label = varname, x = xvar, y = yvar, 
                   angle = angle, hjust = hjust), 
-              color = 'darkred', size = varname.size)
+              color = 'darkred', size = varname.size,
+	      family = "HiraKakuProN-W3")
   }
   # Change the name of the legend for groups
   # if(!is.null(groups)) {
